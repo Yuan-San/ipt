@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/5ad3573202.js" crossorigin="anonymous"></script>
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="C:\Users\user\Documents\Alaikal Hamdi\web\ipt\static\css\bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script> 
+    <title>Dashboard</title>
+</head>
+<style>
+
+</style>
+<body style="height: 100%;">
+    {% include 'includedashboard.html' %}
+    <div class="main">
+        <div class="widget">
+          <div class="header" style="display: flex;justify-content: space-between;padding: 8px;margin: 0%;align-items: center;">
+            <div style="display: flex;justify-content: space-between;align-items: center;">
+              <h3 style="margin-right: 20px;">Item</h3>
+              <div class="select">
+                <select name="date_selector" id="date_selector" onchange="updateChart()">
+                  {% for x in dates %}
+                  <option value="{{x.date}}">{{x.date}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <a href="add/" style="color: white;">Tambah...</a>
+          </div>
+          <div style="display: flex;justify-content: center;overflow-x: scroll;">
+            <table class="table table-hover" id="itemTable">
+              <thead>
+              <tr>
+                  <th>Tanggal</th>
+                  <th>Nama</th>
+                  <th>Harga</th>
+                  <th>Stok</th>
+                  <th>Aksi</th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for x in items %}
+              {% if not x.name == 'test' %}
+              <tr id="{{x.date}}_{{forloop.counter}}">
+                  <th scope="row">{{x.date}}</td>
+                  <td>{{ x.name }}</td>
+                  <td>Rp{{ x.price }}/{{x.price_unit}} </td>
+                  <td>{{ x.stock }}{{x.stock_unit}}</td>
+                  <td><a href="delete/{{x.id}}" style="color: red;">Hapus</a>   <a href="update/{{ x.id }}" style="color: gray;">Update</a></td>
+                  <script>
+                      function confirmation() {
+                          confirm("Are you sure?");
+                      }
+                  </script>
+            </tr>
+              {% endif %}
+              {% endfor %}
+          </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="widget">
+          <div class="header"><h3>Berita</h3></div>
+        </div>
+    </div>
+    {% if request.GET.message %}
+    <div style="display: flex;justify-content: center;">
+      <div style="position: absolute;bottom: 0%;background-color: red;height: 10%;display: flex;align-items: center;width: 95%;justify-content: center;border-radius: 5px;margin-bottom: 10px;color: #fff;" id="modal">
+        <i class="fa-solid fa-check" style="color: #ffffff;margin-right: 10px;"> </i> 
+        {{ request.GET.message }}
+      </div>
+    </div>
+    {% endif %}
+      <footer>
+      <div class="footer-content">
+        <p>&copy; Copyright 2023 All rights reserved.</p>
+        <p>Contact: yuan.arib@gmail.com</p>
+      </div>
+    </footer> 
+<script>
+  document.addEventListener('DOMContentLoaded', ()=>{
+    sortDates()
+    const modal = document.getElementById('modal')
+    try{
+      if (modal.textContent === "Data berhasil diperbarui.") {
+        modal.style.backgroundColor = "green";
+      }
+    } catch{}
+    updateChart()
+  })
+
+  function sortDates() {
+    const selectElement = document.getElementById("date_selector");
+    const optionsArray = Array.from(selectElement.options);
+
+    optionsArray.sort((a, b) => {
+      const dateA = new Date(a.value);
+      const dateB = new Date(b.value);
+      return dateB - dateA;
+    });
+
+    selectElement.innerHTML = '';
+
+    const placeholderOption = document.createElement("option");
+    placeholderOption.text = "Select a date";
+    placeholderOption.value = "";
+    selectElement.appendChild(placeholderOption);
+
+    optionsArray.forEach(option => {
+      selectElement.appendChild(option);
+    });
+
+    selectElement.selectedIndex = 1;
+}
+
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+  function updateChart(){
+    const selector = document.getElementById("date_selector");
+    const selectedValue = document.getElementById('date_selector').value;
+    const dates = []
+    for (i = 0; i < selector.length; i++) {
+      txt = selector.options[i].value;
+      dates.push(txt)
+    }
+    console.log(dates)
+    for (let i=1;i<100;i++){
+      for (j of dates){
+        tr = document.getElementById(j+"_"+i)
+        if (j == selectedValue){
+          try {
+            tr.style.display = 'table-row'
+          } catch {}
+        } else {
+          try {
+            tr.style.display = 'none'
+          } catch {}
+        }
+    }
+    }
+    console.log(selectedValue)
+  }
+</script>
+</body>
+</html>

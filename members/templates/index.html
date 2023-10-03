@@ -1,0 +1,165 @@
+{% load static %}
+{% load operations %}
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/5ad3573202.js" crossorigin="anonymous"></script>
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="C:\Users\user\Documents\Alaikal Hamdi\web\ipt\static\css\bootstrap.min.css" rel="stylesheet">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="{% static 'css/index.css' %}" rel="stylesheet">
+  <title>Informasi Pangan Tebo</title>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="/"><img src="{% static 'img/Informasi_Pangan_Tebo-cut.png' %}" height="60px"></a>
+        <a href="/"><i class="fa-solid fa-house"> </i> Beranda</a>
+        <a href="#contact" class="contact"><i class="fa-regular fa-envelope"> </i> Kontak</a>
+        <a href="#about"><i class="fa-regular fa-user"> </i> Tentang</a>
+        {% if user.is_authenticated %}
+        <a href="/dashboard"><i class="fa-solid fa-list"> </i> Dashboard</a>
+        <a href="{% url 'logout' %}" class="login" style="padding-right: 0%;"><i class="fa-solid fa-user"></i> Halo, {{user.username}}</a>
+        {%else%}
+        <a href="{% url 'login' %}" class="login"><i class="fa-solid fa-right-to-bracket"> </i> Login</a>
+        {%endif%}
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <marquee style="font-family: 'Inter', sans-serif;">Berita Pangan 1</marquee>
+  <main>
+    <div class="main">
+      {% if items_today %}
+        <div class="header"><h3>Harga Rata-Rata Komoditas Hari ini ({{date}})</h3><p>* Harga dibandingkan dengan harga pada hari sebelumnya ({{date_yesterday}})</p></div>
+      {% else %}
+        <div class="header"><h3>Harga Rata-Rata Komoditas ( Tidak Update! )</h3><p>* Menampilkan Harga sebelumnya</p></div>
+      {% endif %}
+  <div class="cardholder">
+    {% if items_today %}
+    {% for x in items_today %}
+    {% if x.name != "test" %}
+    <div class="card">
+      <div style="display: flex;justify-content: space-between;">
+        <h3>{{ x.name }}</h3>
+        <p style="margin: 0%;">Stok: {{x.stock}}</p>
+      </div>
+      <p class="price">Rp{{ x.price }}/{{ x.price_unit }}</p>
+      {% if x.yesterday_price %} <!-- yesterday price checking -->
+        {% if x.price|sub:x.yesterday_price == 0 %} <!-- price substraction -->
+        <div class="stable"><p class="ch-p"><i class="fa-solid fa-equals"></i> Harga Stabil</p></div>
+        {% elif x.price|sub:x.yesterday_price > 0 %} <!-- price substraction -->
+        <div class="increase"><p class="ch-p"><i class="fa-solid fa-chevron-up" ></i> Harga Naik </p><p style="text-align: right;float: right;" class="ch-p">Rp{{x.price|sub:x.yesterday_price}}</p></div>
+        {% elif x.price|sub:x.yesterday_price < 0 %} <!-- price substraction -->
+        <div class="decrease"><p class="ch-p"><i class="fa-solid fa-chevron-down" ></i> Harga Turun </p><p style="text-align: right;float: right;" class="ch-p">Rp{{x.price|sub:x.yesterday_price}}</p></div>
+        {% endif %} <!-- price substraction -->
+      {% else %}  <!-- yesterday price checking -->
+      <div class="no-info"><p class="ch-p"><i class="fa-solid fa-xmark"></i> Tidak Ada Info</p></div>
+      {% endif %}  <!-- yesterday price checking -->
+      {% if x.description %}
+      <div style="color: black;"><p class="ch-p" style="color: black;"><i class="fa-solid fa-circle-info"></i> {{x.description}}</p></div>
+      {%endif%} <!-- "description" if -->
+    </div>
+    {%endif%} <!-- "test" if -->
+    {% endfor %} <!-- for x in items_today -->
+
+    {% else %}
+    {% for x in items %}
+    {% if x.name != "test" %}
+    <div class="card">
+      <div style="display: flex;justify-content: space-between;">
+        <h3>{{ x.name }}</h3>
+        <p style="margin: 0%;">Stok: {{x.stock}}</p>
+      </div>
+      <p class="price">Rp{{ x.price }}/{{ x.price_unit }}</p>
+      {% if x.description %}
+      <div style="color: black;"><p class="ch-p" style="color: black;"><i class="fa-solid fa-circle-info"></i> {{x.description}}</p></div>
+      {%endif%} <!-- "description" if -->
+    </div>
+    {%endif%} <!-- "test" if -->
+    {% endfor %} <!-- for x in items -->
+    {% endif %} <!-- "items_today" else if -->
+    <!-- Add more cards as needed -->
+    </div>
+    </div>
+    <div class="news">
+        <div class="header"><h3>Berita</h3></div>
+            <div class="previous-news">
+              {% if news %}
+              {% for x in news %}
+              <div class="news-item" id="news"><img src="{% static 'img/DES2018.png' %}" style="width: 200px;height: auto;" id="news-img1"><h4>{{ x.title }}</h4><p style="margin-top: 0px;">{{x.short_description}}</p></div>
+              {% endfor %}
+              {% else %}
+              <div style="display: flex;justify-content: space-around;align-items: center;background-color: #d0d0d0;width: 100%; padding: 10px;text-align: center;">
+                Belum ada berita.
+              </div>
+              {% endif %}
+            </div>
+    </div>
+    <div class="news" id="contact">
+      <div class="header"><h3>Kontak</h3></div>
+         <div style="display: flex;justify-content: space-around;align-items: center;background-color: #d0d0d0;width: 100%; padding: 10px;">
+          <div>
+            <i class="fa-regular fa-envelope" style="margin-right: 10px;"></i> Email: yuan.arib@gmail.com
+          </div>
+          <div>
+            <i class="fa-brands fa-whatsapp" style="margin-right: 10px;"></i> WhatsApp: +62 823-5335-8664
+          </div>
+        </div>
+  </div>
+  <div class="news" id="about">
+    <div class="header"><h3>Tentang</h3></div>
+       <div style="display: flex;justify-content: space-around;align-items: center;background-color: #d0d0d0;width: 100%; padding: 10px;text-align: center;">
+        Informasi Pangan Tebo
+      </div>
+</div>
+    </main>
+    <footer>
+        <div class="footer-content">
+          <p>&copy; Copyright 2023 All rights reserved.</p>
+          <p>Contact: yuan.arib@gmail.com</p>
+        </div>
+      </footer>      
+
+      <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    var news = document.getElementById("news")
+    var news_img1 = document.getElementById("news-img1")
+    var news_img2 = document.getElementById("news-img2")
+    var news_img3 = document.getElementById("news-img3")
+    function adjustDisplay() {
+      if (window.innerWidth < 1200) {
+        news_img1.style.float = "none"
+        news_img2.style.float = "none"
+        news_img3.style.float = "none"
+        console.log("small")
+      } else {
+        news_img1.style.float = "left"
+        news_img2.style.float = "left"
+        news_img3.style.float = "left"
+      }
+    }
+    
+    // adjustDisplay();
+    
+    // window.addEventListener("resize", console.log("resized"));
+    new ResizeObserver(() => adjustDisplay()).observe(news);
+    </script>
+</body>
+
+</html>
