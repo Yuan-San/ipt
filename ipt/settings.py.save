@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ipt.ipt.urls'
+ROOT_URLCONF = 'ipt.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ipt.ipt.wsgi.application'
+WSGI_APPLICATION = 'ipt.wsgi.application'
 
 
 # Database
@@ -134,13 +134,12 @@ LOGGING = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/home2/is031023/django/ipt/static/'
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    "/home2/is031023/django/ipt/static/",
-    "/home2/is031023/django/ipt/members/static/",
+    BASE_DIR / "static",
+    BASE_DIR / "members/static",
 ]
-STATIC_ROOT = "/home2/is031023/django/ipt"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

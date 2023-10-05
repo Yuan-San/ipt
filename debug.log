@@ -1,0 +1,1057 @@
+(0.005) SELECT * FROM members_item WHERE date = '2023-10-05'; args=(); alias=default
+(0.000) SELECT "members_item"."id", "members_item"."date", "members_item"."name", "members_item"."price", "members_item"."price_unit", "members_item"."yesterday_price", "members_item"."stock", "members_item"."stock_unit", "members_item"."description" FROM "members_item"; args=(); alias=default
+(0.002) SELECT "members_news"."id", "members_news"."title", "members_news"."short_description", "members_news"."long_description" FROM "members_news"; args=(); alias=default
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'static/css/bootstrap.min.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'static/css/bootstrap.min.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /static/css/bootstrap.min.css
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'static/img/Informasi_Pangan_Tebo-cut.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'static/img/Informasi_Pangan_Tebo-cut.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /static/img/Informasi_Pangan_Tebo-cut.png
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'static/css/index.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'static/css/index.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /static/css/index.css
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'static/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'static/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /static/js/bootstrap.min.js
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /favicon.ico
+(0.002) SELECT * FROM members_item WHERE date = '2023-10-05'; args=(); alias=default
+(0.000) SELECT "members_item"."id", "members_item"."date", "members_item"."name", "members_item"."price", "members_item"."price_unit", "members_item"."yesterday_price", "members_item"."stock", "members_item"."stock_unit", "members_item"."description" FROM "members_item"; args=(); alias=default
+(0.000) SELECT "members_news"."id", "members_news"."title", "members_news"."short_description", "members_news"."long_description" FROM "members_news"; args=(); alias=default
+(0.001) SELECT * FROM members_item WHERE date = '2023-10-05'; args=(); alias=default
+(0.000) SELECT "members_item"."id", "members_item"."date", "members_item"."name", "members_item"."price", "members_item"."price_unit", "members_item"."yesterday_price", "members_item"."stock", "members_item"."stock_unit", "members_item"."description" FROM "members_item"; args=(); alias=default
+(0.000) SELECT "members_news"."id", "members_news"."title", "members_news"."short_description", "members_news"."long_description" FROM "members_news"; args=(); alias=default
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'ipt/static/css/bootstrap.min.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'ipt/static/css/bootstrap.min.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /ipt/static/css/bootstrap.min.css
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'ipt/static/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'ipt/static/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /ipt/static/js/bootstrap.min.js
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'ipt/static/css/index.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'ipt/static/css/index.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /ipt/static/css/index.css
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'ipt/static/img/Informasi_Pangan_Tebo-cut.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'ipt/static/img/Informasi_Pangan_Tebo-cut.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /ipt/static/img/Informasi_Pangan_Tebo-cut.png
+(0.001) SELECT * FROM members_item WHERE date = '2023-10-05'; args=(); alias=default
+(0.000) SELECT "members_item"."id", "members_item"."date", "members_item"."name", "members_item"."price", "members_item"."price_unit", "members_item"."yesterday_price", "members_item"."stock", "members_item"."stock_unit", "members_item"."description" FROM "members_item"; args=(); alias=default
+(0.000) SELECT "members_news"."id", "members_news"."title", "members_news"."short_description", "members_news"."long_description" FROM "members_news"; args=(); alias=default
+(0.002) SELECT * FROM members_item WHERE date = '2023-10-05'; args=(); alias=default
+(0.000) SELECT "members_item"."id", "members_item"."date", "members_item"."name", "members_item"."price", "members_item"."price_unit", "members_item"."yesterday_price", "members_item"."stock", "members_item"."stock_unit", "members_item"."description" FROM "members_item"; args=(); alias=default
+(0.000) SELECT "members_news"."id", "members_news"."title", "members_news"."short_description", "members_news"."long_description" FROM "members_news"; args=(); alias=default
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'home2/is031023/django/ipt/static/css/bootstrap.min.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'home2/is031023/django/ipt/static/css/bootstrap.min.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /home2/is031023/django/ipt/static/css/bootstrap.min.css
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'home2/is031023/django/ipt/static/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'home2/is031023/django/ipt/static/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /home2/is031023/django/ipt/static/js/bootstrap.min.js
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'home2/is031023/django/ipt/static/css/index.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'home2/is031023/django/ipt/static/img/Informasi_Pangan_Tebo-cut.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'home2/is031023/django/ipt/static/css/index.css'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '' [name='index']>], [<URLPattern 'dashboard/' [name='dashboard']>], [<URLPattern 'dashboard/add/' [name='add_data']>], [<URLPattern 'dashboard/add/addrecord/' [name='addrecord']>], [<URLPattern 'dashboard/delete/<int:id>' [name='delete']>], [<URLPattern 'dashboard/update/<int:id>' [name='update']>], [<URLPattern 'dashboard/update/updaterecord/<int:id>' [name='updaterecord']>], [<URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>]], 'path': 'home2/is031023/django/ipt/static/img/Informasi_Pangan_Tebo-cut.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from '/home2/is031023/virtualenv/django/3.8/lib/python3.8/site-packages/django/contrib/auth/urls.py'> (None:None) 'accounts/'>
+Not Found: /home2/is031023/django/ipt/static/css/index.css
+Not Found: /home2/is031023/django/ipt/static/img/Informasi_Pangan_Tebo-cut.png
+(0.004) SELECT * FROM members_item WHERE date = '2023-10-05'; args=(); alias=default
+(0.000) SELECT "members_item"."id", "members_item"."date", "members_item"."name", "members_item"."price", "members_item"."price_unit", "members_item"."yesterday_price", "members_item"."stock", "members_item"."stock_unit", "members_item"."description" FROM "members_item"; args=(); alias=default
+(0.000) SELECT "members_news"."id", "members_news"."title", "members_news"."short_description", "members_news"."long_description" FROM "members_news"; args=(); alias=default
+(0.001) SELECT * FROM members_item WHERE date = '2023-10-05'; args=(); alias=default
+(0.000) SELECT "members_item"."id", "members_item"."date", "members_item"."name", "members_item"."price", "members_item"."price_unit", "members_item"."yesterday_price", "members_item"."stock", "members_item"."stock_unit", "members_item"."description" FROM "members_item"; args=(); alias=default
+(0.000) SELECT "members_news"."id", "members_news"."title", "members_news"."short_description", "members_news"."long_description" FROM "members_news"; args=(); alias=default
+(0.002) SELECT * FROM members_item WHERE date = '2023-10-05'; args=(); alias=default
+(0.000) SELECT "members_item"."id", "members_item"."date", "members_item"."name", "members_item"."price", "members_item"."price_unit", "members_item"."yesterday_price", "members_item"."stock", "members_item"."stock_unit", "members_item"."description" FROM "members_item"; args=(); alias=default
+(0.000) SELECT "members_news"."id", "members_news"."title", "members_news"."short_description", "members_news"."long_description" FROM "members_news"; args=(); alias=default
+(0.001) SELECT * FROM members_item WHERE date = '2023-10-05'; args=(); alias=default
+(0.000) SELECT "members_item"."id", "members_item"."date", "members_item"."name", "members_item"."price", "members_item"."price_unit", "members_item"."yesterday_price", "members_item"."stock", "members_item"."stock_unit", "members_item"."description" FROM "members_item"; args=(); alias=default
+(0.000) SELECT "members_news"."id", "members_news"."title", "members_news"."short_description", "members_news"."long_description" FROM "members_news"; args=(); alias=default
+(0.002) SELECT * FROM members_item WHERE date = '2023-10-05'; args=(); alias=default
+(0.000) SELECT "members_item"."id", "members_item"."date", "members_item"."name", "members_item"."price", "members_item"."price_unit", "members_item"."yesterday_price", "members_item"."stock", "members_item"."stock_unit", "members_item"."description" FROM "members_item"; args=(); alias=default
+(0.000) SELECT "members_news"."id", "members_news"."title", "members_news"."short_description", "members_news"."long_description" FROM "members_news"; args=(); alias=default
