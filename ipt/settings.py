@@ -117,10 +117,7 @@ USE_TZ = True
 
 STATIC_URL = '/home2/is031023/django/ipt/static/'
 
-STATICFILES_DIRS = [
-    "/home2/is031023/django/ipt/static/",
-    "/home2/is031023/django/ipt/members/static/",
-]
+STATICFILES_DIRS = []
 STATIC_ROOT = "/home2/is031023/django/ipt"
 
 # Default primary key field type
